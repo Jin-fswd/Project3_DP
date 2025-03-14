@@ -8,14 +8,14 @@ function TopNavbar() {
   const notifications = [
     {
       id: 1,
-      message: "Your Jeju Island trip has been confirmed!",
+      message: "Your Cancun trip has been confirmed!",
       time: "Just now",
       icon: "✈️",
       isNew: true
     },
     {
       id: 2,
-      message: "Hotel booking completed: Jeju Hilton",
+      message: "Hotel booking completed: Cancun Hilton",
       time: "5 minutes ago",
       icon: "🏨",
       isNew: true
