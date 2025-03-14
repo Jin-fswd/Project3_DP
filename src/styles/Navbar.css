@@ -1,0 +1,257 @@
+/* Navbar.css 내용을 이 파일로 이동 */
+/* 상단 네비게이션 바 */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ff6000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.top-navbar h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.top-navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* 하단 네비게이션 바 */
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+
+.nav-item.active {
+  color: #ff6000;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .top-navbar h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* SVG 아이콘 스타일 */
+.svg-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item.active .svg-icon {
+  color: #ff6000;
+}
+
+.nav-item:not(.active) .svg-icon {
+  color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-item:not(.active) .svg-icon {
+    color: #aaa;
+  }
+}
+
+/* 나머지 Navbar.css 내용 */
+.notification-container {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4444;
+  color: white;
+  font-size: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(255, 68, 68, 0.3);
+}
+
+.notification-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+  z-index: 1000;
+  min-width: 320px;
+  animation: fadeIn 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.notification-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notification-count {
+  color: #666;
+  font-size: 13px;
+}
+
+.notification-list {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #f8f8f8;
+}
+
+.notification-item.new {
+  background-color: #fff8f0;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-icon {
+  font-size: 24px;
+  min-width: 24px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-message {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #888;
+  display: block;
+}
+
+.new-indicator {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff6000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 스크롤바 스타일링 */
+.notification-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.icon-button:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.logo-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+} 
