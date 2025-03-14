@@ -9,7 +9,10 @@ function VacationCard({ image, title, buttonText, onClick }) {
       </div>
       <div className="vacation-card-content">
         <h3 className="vacation-card-title">{title}</h3>
-        <button className="vacation-card-button" onClick={onClick}>
+        <button 
+          className="vacation-card-button"
+          onClick={onClick}
+        >
           {buttonText}
         </button>
       </div>
